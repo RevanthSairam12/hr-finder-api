@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hr-finder-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    rootDir: hr-finder-api
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
