@@ -15,7 +15,7 @@ from datetime import datetime
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from ddgs import DDGS
+from duckduckgo_search import DDGS
 
 # ── Logging ──────────────────────────────────────────────────────
 
