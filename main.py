@@ -130,7 +130,7 @@ def execute_search(company: str, location: str, max_results: int = 15) -> list[d
         logging.info(f"Trying '{backend}' backend...")
         try:
             with DDGS() as ddgs:
-                raw = ddgs.text(query=query, max_results=max_results, backend=backend)
+                raw = ddgs.text(query, max_results=max_results, backend=backend)
 
                 if not raw:
                     logging.warning(f"No results from '{backend}'")
